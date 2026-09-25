@@ -12,7 +12,11 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: [
+      'https://adebowale-motors.vercel.app',
+      'https://adebowale-motors-bsnvlknz4-sam-ores-projects.vercel.app',
+      'http://localhost:5173',
+    ],
     credentials: true,
   })
 );
